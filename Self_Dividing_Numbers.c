@@ -1,33 +1,25 @@
 #include<stdio.h>
+int self(int);
 int main()
 {
-    int n1,n2,s=0,i,m,a;
-    scanf("%d%d",&n1,&n2);
-    for(i=n1;i<=n2;i++)
+    int a,b,i,t,f=0,r;
+    scanf("%d%d",&a,&b);
+     for(i=a;i<=b;i++)
+     {
+         f=0;
+         t=i;
+     while(t!=0)
     {
-        int a=i;m=0;
-    while(a)
+        r=t%10;
+        if(r==0 ||i%r!=0)
+        {
+            f=1;
+        }
+        t=t/10;
+    }
+    if(f==0)
     {
-        m=a%10;
-    if(m==0)
-        {
-            s=0;
-            break;
-        }
-    if(i%m!=0)
-        {
-            s=0;
-            break;
-        }
-    if(i%m==0)
-        {
-            s=1;
-        }
-        a=a/10;
+    printf("%d ",i);
     }
-    if(s==1)
-    {
-        printf("%d ",i);
-    }
-    }
+ }
 }
